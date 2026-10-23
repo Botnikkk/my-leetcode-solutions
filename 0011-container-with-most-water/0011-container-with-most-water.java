@@ -6,10 +6,11 @@ class Solution {
         int low = 0;
         int high = height.length - 1;
         while (low < high) {
-            area = (high - low) * Math.min(height[low], height[high]);
             if (height[low] < height[high]) {
+                 area = (high - low) * height[low];
                 low++;
             } else {
+                 area = (high - low) * height[high];
                 high--;
             }
 
